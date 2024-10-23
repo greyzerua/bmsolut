@@ -1,0 +1,53 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "TT Ramillas Trl";
+  font-size: 22px;
+  border-radius: 90px;
+  min-height: 60px;
+  width: 279px;
+  padding: 0 15px;
+  transition: 0.3s all;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  @extend .button;
+  background-color: $secondary-color;
+  color: $white-color;
+  box-shadow: 0px 0px 15px 0px #00000033;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.button--secondary {
+  @extend .button;
+  background-color: transparent;
+  color: $white-color;
+  border: 1px solid $white-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($text-color, 5%);
+    box-shadow: 0 0 15px rgba(darken($text-color, 15%), 0.5);
+  }
+}
+
+@media (max-width: 800px) {
+  .main {
+    .button {
+      min-height: 50px;
+      max-width: 228px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .button {
+    font-size: 16px;
+  }
+}
