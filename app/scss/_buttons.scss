@@ -2,11 +2,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: "TT Ramillas Trl";
-  font-size: 22px;
+  font-family: 'Gilroy-Bold';
+  font-size: 20px;
   border-radius: 90px;
-  min-height: 60px;
-  width: 279px;
+  min-height: 50px;
+  width: 258px;
   padding: 0 15px;
   transition: 0.3s all;
   text-decoration: none;
@@ -41,13 +41,12 @@
   .main {
     .button {
       min-height: 50px;
-      max-width: 228px;
+      max-width: 258px;
+      font-size: 20px;
     }
   }
 }
 
 @media (max-width: 680px) {
-  .button {
-    font-size: 16px;
-  }
+ 
 }

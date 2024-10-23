@@ -34,9 +34,9 @@ class CountdownTimer {
     constructor() {
         this.timerElements = {
             days: document.querySelector('.main__timer_wrap .timer__inner:nth-child(1) .timer'),
-            hours: document.querySelector('.main__timer_wrap .timer__inner:nth-child(2) .timer'),
-            minutes: document.querySelector('.main__timer_wrap .timer__inner:nth-child(3) .timer'),
-            seconds: document.querySelector('.main__timer_wrap .timer__inner:nth-child(4) .timer')
+            hours: document.querySelector('.main__timer_wrap .timer__inner:nth-child(3) .timer'),
+            minutes: document.querySelector('.main__timer_wrap .timer__inner:nth-child(5) .timer'),
+            seconds: document.querySelector('.main__timer_wrap .timer__inner:nth-child(7) .timer')
         };
         
         this.initialTime = {
@@ -89,10 +89,40 @@ class CountdownTimer {
         for (const [unit, element] of Object.entries(this.timerElements)) {
             if (element) {
                 element.textContent = this.padZero(Math.max(0, this.timeLeft[unit]));
+                // Виклик функції для оновлення спінера
+                this.updateSpinner(unit, this.timeLeft[unit]);
             }
         }
     }
-
+    
+    updateSpinner(unit, value) {
+        const spinner = document.querySelector(`.spinner-${unit}`);
+        let maxValue;
+    
+        // Визначаємо максимальні значення для кожної одиниці
+        switch (unit) {
+            case 'days':
+                maxValue = 30; // Можна задати більше, якщо акція довша
+                break;
+            case 'hours':
+                maxValue = 24;
+                break;
+            case 'minutes':
+                maxValue = 60;
+                break;
+            case 'seconds':
+                maxValue = 60;
+                break;
+            default:
+                maxValue = 1; // На випадок, якщо є інші одиниці
+        }
+    
+        if (spinner) {
+            const percentage = (value / maxValue) * 360; // Обчислюємо відсоток
+            spinner.style.transform = `rotate(${percentage}deg)`;
+        }
+    }
+    
     padZero(number) {
         return number.toString().padStart(2, '0');
     }
@@ -135,3 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.globalTimer = new CountdownTimer();
     window.globalTimer.start();
 });
+
