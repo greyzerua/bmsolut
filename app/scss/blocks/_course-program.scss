@@ -1,5 +1,5 @@
 .course-program {
-  padding: 85px 0 100px;
+  padding: 93px 0 66px;
   overflow: hidden;
 
   &__title {
@@ -27,9 +27,6 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0px;
-    }
   }
 
   .dropdown {
@@ -70,6 +67,7 @@
     color: $dark-color;
   }
   .lesson-title {
+    transition: .3s all;
     font-family: "Gilroy-Bold";
   }
   .icon {
@@ -96,7 +94,9 @@
 .dropdown.active .icon {
   background-image: url(../images/design-skills-icon-grey.svg);
 }
-
+.dropdown.active .lesson-title {
+  color: #485079;
+}
 .dropdown-content {
   max-height: 0;
   overflow: hidden;
@@ -125,7 +125,10 @@
   opacity: 0;
 }
 @media (max-width: 848px) {
-
+  .course-program {
+    padding: 45px 0 0px;
+    
+  }
 }
 
 @media (max-width: 750px) {

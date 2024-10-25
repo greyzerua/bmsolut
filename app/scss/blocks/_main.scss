@@ -262,8 +262,11 @@
 }
 
 @media (max-width: 850px) {
+  .main {
+    overflow-x: unset;
+  }
   .main__timer {
-    background-color: rgb(255 255 255 / 60%);
+    background-color: hsl(0deg 0% 100% / 58%);
     z-index: 20;
   }
   .bg-photo {
@@ -327,6 +330,7 @@
     background-image: unset;
     .main__img__bg {
       right: -20px;
+      bottom: -11px;
       position: absolute;
       height: 100%;
     }
@@ -338,7 +342,7 @@
     }
 
     &__content {
-      padding-bottom: 10px;
+      padding-bottom: 0px;
       margin-top: 14px;
     }
     &__title {
