@@ -78,7 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../images/design-skills-icon.svg);
+    background-image: url(../images/design-skills-icon.svg);
     width: 46px;
     height: 51px;
     background-repeat: no-repeat;
@@ -94,7 +94,7 @@
 }
 
 .dropdown.active .icon {
-  background-image: url(../../images/design-skills-icon-grey.svg);
+  background-image: url(../images/design-skills-icon-grey.svg);
 }
 
 .dropdown-content {
@@ -125,7 +125,7 @@
   opacity: 0;
 }
 @media (max-width: 848px) {
-  
+
 }
 
 @media (max-width: 750px) {
