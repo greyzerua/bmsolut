@@ -1,11 +1,55 @@
 .design-skills {
-    &__title {
-        font-weight: 700;
-        font-size: 30px;
-        text-transform: uppercase;
-        color: #485079;
-        margin-bottom: 19px;
-    }
-   
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #485079;
+    margin-bottom: 19px;
+  }
 }
 
+@media (max-width: 819px) {
+  .design-skills {
+    &__title {
+      font-size: 23px;
+    }
+  }
+}
+
+@media (max-width: 819px) {
+  .design-skills {
+    &__title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .design-skills {
+    .dropdown {
+      max-width: 100%;
+      padding: 0px 12px 0px 12px;
+      &:after {
+        content: "";
+        width: 84%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  .design-skills {
+    .lesson-title {
+      font-size: 18px;
+    }
+    .dropdown-header {
+      height: 50px;
+    }
+    .icon {
+      right: -22px;
+    }
+  }
+}

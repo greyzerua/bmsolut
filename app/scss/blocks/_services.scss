@@ -6,27 +6,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 85px 0px 100px;
-  &__sphere {
-    position: absolute;
-  }
-  &__sphere-3 {
-    width: 56px;
-    height: 56px;
-    top: 207px;
-    left: 81px;
-  }
-  &__sphere-2 {
-    width: 43px;
-    height: 43px;
-    right: 235px;
-    top: 280px;
-  }
-  &__sphere-1 {
-    width: 60px;
-    height: 60px;
-    bottom: 70px;
-    left: 305px;
-  }
+  
   &__mobile-text {
     display: none;
     width: 65%;
@@ -151,45 +131,8 @@
   }
 }
 
-@media (max-width: 1624px) {
-  .services {
-    &__sphere-1 {
-      bottom: 55px;
-      left: 126px;
-    }
 
-    &__sphere-2 {
-      right: 180px;
-      top: 305px;
-    }
-  }
-}
 
-@media (max-width: 1340px) {
-  .services {
-    &__sphere-1 {
-      bottom: 55px;
-      left: 42px;
-    }
-
-    &__sphere-2 {
-      right: 150px;
-      top: 330px;
-    }
-  }
-}
-
-@media (max-width: 1132px) {
-  .services {
-    &__title {
-      font-size: 50px;
-    }
-    &__sphere-2 {
-      right: 124px;
-      top: 344px;
-    }
-  }
-}
 
 @media (max-width: 963px) {
   .services {
@@ -297,7 +240,7 @@
       z-index: 2;
     }
     &__title {
-      font-size: 27px;
+      font-size: 29px;
       span {
         max-width: 273px;
       }
@@ -339,9 +282,3 @@
   }
 }
 
-@media (max-width: 476px) {
-  .services__sphere-1 {
-    left: 35px;
-    top: 357px;
-  }
-}
