@@ -28,7 +28,6 @@
 @media (max-width: 790px) {
   .design-skills {
     .dropdown {
-      max-width: 100%;
       padding: 0px 12px 0px 12px;
       &:after {
         content: "";
@@ -49,7 +48,7 @@
       height: 50px;
     }
     .icon {
-      right: -22px;
+      margin-top: 0;
     }
   }
 }

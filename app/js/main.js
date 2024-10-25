@@ -23,9 +23,9 @@ const hideDropdown = (dropdown) => {
 
 document.querySelectorAll(".dropdown-header").forEach((header) => {
   header.addEventListener("click", function () {
-    const allDropDowns = document.querySelectorAll(".dropdown");
+    const allDropDowns = document.querySelectorAll(".dropdown-outer");
     
-    const dropdown = this.closest(".dropdown");
+    const dropdown = this.closest(".dropdown-outer");
     const content = dropdown.querySelector(".dropdown-content");
 
     if (dropdown.classList.contains("active")) {
