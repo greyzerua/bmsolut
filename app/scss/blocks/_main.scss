@@ -32,7 +32,7 @@
     left: -29px;
   }
   &__img__bg {
-    right: 30px;
+    right: 6px;
 
     position: absolute;
 
@@ -125,7 +125,7 @@
     border-top-right-radius: 45px;
     border-bottom-left-radius: 45px;
     align-self: flex-end;
-    box-shadow: 0px 0px 20px 0px rgba(25, 28, 37, 0.1);
+    box-shadow: 0px 0px 12px 0px rgba(25, 28, 37, 0.1);
     &_text {
       font-family: "Gilroy-Regular";
       max-width: 67px;
@@ -307,7 +307,6 @@
     &__desc {
       font-size: 23px;
     }
-    
   }
 }
 
@@ -333,13 +332,11 @@
     }
     &__join {
       margin: 30px auto 0px;
-
     }
     &__img {
-      width: 100%;
       height: 502px;
     }
-   
+
     &__content {
       padding-bottom: 10px;
       margin-top: 14px;
@@ -366,8 +363,6 @@
         font-size: 20px;
       }
     }
-    
-    
   }
   .line-mobile {
     width: 155px;
