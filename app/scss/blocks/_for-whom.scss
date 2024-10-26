@@ -80,23 +80,6 @@
     }
   }
 
-  &__icon-items {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  &__icon-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   &__desc {
     text-align: center;
   }
