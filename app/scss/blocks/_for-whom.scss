@@ -6,7 +6,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0px 0px 36px;
-
+  &__wrap {
+    position: relative;
+    .bg-skills {
+      height: 687px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -3;
+      transform: translateY(calc((100% - 90px)* -1));
+    }
+  }
   &__icon {
     position: absolute;
   }
@@ -140,6 +150,9 @@
   }
 }
 @media (max-width: 883px) {
+  .bg-skills {
+    display: none;
+  }
   .for-whom {
     background-image: url(../images/for-whom/for-whom__bg.png);
     z-index: -10;
