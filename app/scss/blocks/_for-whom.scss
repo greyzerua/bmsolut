@@ -49,21 +49,35 @@
     padding: 0px 7px 0px 56px;
   }
 
-  &__icon-items {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -60px;
+  &__card-icon {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-  }
+    width: 100px;
+    min-width: 100px;
+    height: 92px;
+    background-image: url(../images/for-whom/icon-items/image-vector-2.svg);
 
-  &__icon-inner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &-wrap {
+      position: absolute;
+      left: -47px;
+      z-index: 1;
+    }
+
+    &-inner {
+      height: 91px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 95px;
+      background-size: cover;
+      justify-content: center;
+      position: absolute;
+      top: -3px;
+      left: 4px;
+      background-image: url(../images/for-whom/icon-items/image-vector-1.svg);
+    }
   }
 
   &__desc {
@@ -144,17 +158,18 @@
       width: 100%;
     }
     &__card__wrap {
-      padding: 20px 7px 20px 56px;
+      padding: 20px 7px 20px 60px;
+      align-items: flex-start;
       width: 100%;
     }
     &__desc-subtitle {
       font-size: 17px;
       max-width: 405px;
     }
-    &__icon-items {
+    &__card-icon-wrap {
       position: unset;
-      margin-right: -72px;
-      margin-left: -14px;
+      left: unset;
+      margin-right: -54px;
     }
     br {
       display: none;
@@ -177,12 +192,11 @@
       margin: 0px auto 0px;
     }
     &__card__wrap {
-      width: 304px;
       min-height: unset;
     }
     &__desc-subtitle {
       font-size: 14px;
-      width: 230px;
+      width: 234px;
     }
     br {
       display: block;
@@ -192,6 +206,9 @@
 
 @media (max-width: 445px) {
   .for-whom {
-    background-image: url(../images/for-whom/for-whom__bg-mobile.svg);
+    background-image: url(../images/for-whom/bg-mobile.svg);
+    min-height: 1030px;
+    padding-bottom: 20px;
+    padding-top: 115px;
   }
 }

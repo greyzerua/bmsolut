@@ -1,0 +1,198 @@
+.time-section {
+    min-height: 622px;
+    background-image: url(../images/time/time-section-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 220px;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 60px;
+        color: $primary-color;
+        margin-bottom: 39px;
+        line-height: 1.1;
+        text-align: center;
+    }
+    &__items {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        gap: 75px;
+      }
+      &__card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      &__card__wrap {
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 0px rgba(8, 49, 85, 0.1019607843);
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: flex-start;
+        min-height: 105px;
+        max-width: 329px;
+        position: relative;
+        padding: 0px 7px 0px 56px;
+      }
+    
+      &__card-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        min-width: 100px;
+        height: 92px;
+        background-image: url(../images/time/icons/image-vector-2.svg);
+    
+        &-wrap {
+          position: absolute;
+          left: -47px;
+          z-index: 1;
+        }
+    
+        &-inner {
+          height: 91px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 95px;
+          background-size: cover;
+          justify-content: center;
+          position: absolute;
+          top: -3px;
+          left: 4px;
+          background-image: url(../images/time/icons/image-vector-1.svg);
+        }
+      }
+    
+      &__desc {
+        text-align: center;
+      }
+    
+      &__desc-subtitle {
+        font-family: "Gilroy-Regular";
+        max-width: 230px;
+        font-size: 17px;
+        text-align: left;
+        line-height: 1.4;
+        color: #485079;
+        span {
+          color: $secondary-color;
+        }
+      }
+}
+
+@media (max-width: 1160px) {
+    .time-section {
+        padding-top: 185px;
+
+      &__title {
+        font-size: 46px;
+      }
+      &__items {
+        flex-wrap: wrap;
+        column-gap: 80px;
+        row-gap: 20px;
+      }
+      &__card {
+        width: 33%;
+      }
+      &__card__wrap {
+        width: 100%;
+        max-width: none;
+      }
+    }
+}
+
+@media (max-width: 800px) {
+    .time-section {
+        &__title {
+            font-size: 30px;
+        }
+        &__items {
+            column-gap: 60px;
+        }
+        &__card {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .time-section {
+        min-height: unset;
+        padding-bottom: 20px;
+        padding: calc(100vw / 6.7) 0 calc(100vw / 4.84);
+        background-image: unset;
+        position: relative;
+        background-color: #fff;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            background-size: contain;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            height: calc(100vw / 6.7);
+            background-image: url(../images/time/wave-top.png);
+        }
+
+        &::after {
+            bottom: 0;
+            left: 0;
+            height: calc(100vw / 4.84);
+            background-image: url(../images/time/wave-bottom.png);
+        }
+
+        &__container {
+            margin-top: calc((100vw / 6.7 - 18px) * -1);
+            padding-bottom: 25px;
+            z-index: 1;
+        }
+
+        &__content {
+            background-color: #F6F7F9;
+        }
+
+        &__title {
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+        &__items {
+            flex-direction: column;
+            width: 100%;
+            gap: 15px;
+        }
+        &__card-icon-wrap {
+            position: unset;
+            left: unset;
+            margin-right: -54px;
+        }
+        &__card {
+            width: 100%;
+        }
+        &__card__wrap {
+            padding: 10px 7px 10px 60px;
+            min-height: 60px;
+        }
+        &__desc-subtitle {
+            font-size: 14px;
+        }
+    }
+}
