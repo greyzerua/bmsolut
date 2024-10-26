@@ -201,6 +201,9 @@
 
 @media (max-width: 445px) {
   .for-whom {
-    background-image: url(../images/for-whom/for-whom__bg-mobile.svg);
+    background-image: url(../images/for-whom/bg-mobile.svg);
+    min-height: 1030px;
+    padding-bottom: 20px;
+    padding-top: 115px;
   }
 }
