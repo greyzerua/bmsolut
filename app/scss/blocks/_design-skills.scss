@@ -41,7 +41,12 @@
   .dropdown-outer.active .lesson-title {
     color: #485079;
   }
-
+  .dropdown-content {
+    margin: unset;
+  }
+  .dropdown-outer.active .dropdown-content {
+    margin: unset;
+  }
   &__bg {
     position: absolute;
     right: 0;
