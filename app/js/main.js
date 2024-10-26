@@ -21,7 +21,10 @@ const hideDropdown = (dropdown) => {
   dropdown.classList.remove("active");
 }
 
-document.querySelectorAll(".dropdown-header").forEach((header) => {
+const els = document.querySelectorAll(".dropdown-header, .dropdown-button");
+console.log('els', els);
+
+els.forEach((header) => {
   header.addEventListener("click", function () {
     const allDropDowns = document.querySelectorAll(".dropdown-outer");
     
