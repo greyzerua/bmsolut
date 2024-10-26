@@ -31,7 +31,6 @@ document.querySelectorAll(".dropdown-header").forEach((header) => {
     if (dropdown.classList.contains("active")) {
       hideDropdown(dropdown);
     } else {
-      console.log('allDropDowns', allDropDowns);
       
       allDropDowns.forEach(el => {
         if (el.classList.contains('active')) {
