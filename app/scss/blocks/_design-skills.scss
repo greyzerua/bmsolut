@@ -1,10 +1,62 @@
 .design-skills {
+  padding: 93px 0 66px;
+  .icon {
+    margin-top: 5px;
+  }
+  .dropdown {
+    position: relative;
+    border-radius: 10px;
+    background-color: $white-color;
+    box-shadow: 0px 0px 15px 5px rgba(25, 28, 37, 0.1);
+    padding: 0px 30px 0px 30px;
+    width: calc(100% - 27px);
+    &:after {
+      content: "";
+      display: inline-block;
+      transition: 0.3s all;
+      position: absolute;
+      background-color: rgb(200, 88, 188);
+      width: 624px;
+      height: 50px;
+      z-index: -2;
+      bottom: -5px;
+      border-radius: 10px;
+    }
+  }
+  .dropdown-outer {
+    max-width: 700px;
+  }
+  .dropdown-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: unset;
+    height: 60px;
+  }
+
+  .dropdown-outer.active .lesson-title {
+    color: #485079;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    bottom: -38%;
+    height: 648px;
+    object-fit: cover;
+    z-index: -20;
+  }
   &__title {
     font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
     color: #485079;
     margin-bottom: 19px;
+  }
+  .dropdown-outer.active .dropdown-header {
+    border: unset;
+    margin-bottom: unset;
   }
 }
 
