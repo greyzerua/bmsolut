@@ -14,7 +14,7 @@
       right: 0;
       top: 0;
       z-index: -3;
-      transform: translateY(calc((100% - 90px)* -1));
+      transform: translateY(calc((100% - 122px)* -1));
     }
   }
   &__icon {
@@ -156,13 +156,13 @@
   .for-whom {
     background-image: url(../images/for-whom/for-whom__bg.png);
     z-index: -10;
-    margin-top: -83px;
+    margin-top: -118px;
     min-height: 1369px;
     &__items {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 20px;
       column-gap: 0px;
-      margin-top: 23px;
+      margin: 23px auto;
     }
     &__title {
       margin-top: 200px;
@@ -223,5 +223,11 @@
     min-height: 1030px;
     padding-bottom: 20px;
     padding-top: 115px;
+    &__items {
+      margin: 23px 0;
+    }
+    &__card {
+      width: 304px;
+    }
   }
 }

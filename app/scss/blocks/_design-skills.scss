@@ -25,6 +25,7 @@
   }
   .dropdown-outer {
     max-width: 700px;
+    margin-bottom: 20px;
   }
   .dropdown-header {
     cursor: pointer;
@@ -101,6 +102,9 @@
     }
     .icon {
       margin-top: 0;
+    }
+    .dropdown-outer {
+      margin-bottom: 15px;
     }
   }
 }
