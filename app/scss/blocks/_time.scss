@@ -193,6 +193,9 @@
         }
         &__desc-subtitle {
             font-size: 14px;
+            span {
+              display: inline-block;
+            }
         }
     }
 }
