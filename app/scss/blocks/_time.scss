@@ -1,9 +1,11 @@
 .time-section {
+    position: relative;
     min-height: 622px;
     background-image: url(../images/time/time-section-bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 220px;
+    z-index: 1;
     &__container {
         display: flex;
         flex-direction: column;
@@ -137,7 +139,7 @@
         padding: calc(100vw / 6.7) 0 calc(100vw / 4.84);
         background-image: unset;
         position: relative;
-        background-color: #fff;
+        background-color: transparent;
 
         &::before, &::after {
             content: '';

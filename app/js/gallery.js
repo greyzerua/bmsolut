@@ -137,25 +137,44 @@ let shownCount = 0;
     }
   };
 
+  const onCheckListItemClick = (imgItem) => {
+    const imgElement = imgItem.querySelector('img');
+    onGalleryItemClick({
+      img: imgElement.src,
+      alt: imgElement.alt
+    })
+  };
+
+  const checkListHandlers = () => {
+    const images = document.querySelectorAll('.check-list-section__img');
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        onCheckListItemClick(img);
+      })
+    });
+  };
+
   export const onLoad = () => {
     const showMoreBtn = document.getElementById('showMoreBtn');
     const videoModal = document.getElementById('videoModal');
 
     updateShownCount();
 
-    renderGallery();
+    checkListHandlers();
 
-    window,addEventListener("resize", () => {
-        updateShownCount();
+    // renderGallery();
 
-        renderGallery();
-    });
+    // window,addEventListener("resize", () => {
+    //     updateShownCount();
+
+    //     renderGallery();
+    // });
   
-    showMoreBtn.addEventListener('click', function(e) {
-      e.preventDefault();
+    // showMoreBtn.addEventListener('click', function(e) {
+    //   e.preventDefault();
       
-      toggleShowMore();
-    });
+    //   toggleShowMore();
+    // });
   
     videoModal.addEventListener('click', function(e) {
       if (e.target === videoModal || e.target.classList.contains('video-modal__close')) {
