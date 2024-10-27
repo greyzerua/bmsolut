@@ -1,0 +1,143 @@
+.check-list-section {
+    padding-top: 167px;
+    padding-bottom: 208px;
+    margin-top: -122px;
+    background-image: url(../images/check-list/desktop-bg.png);
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        max-width: 1100px;
+        margin-bottom: 50px;
+        font-size: 25px;
+        color: #fff;
+        font-family: "Gilroy-Light";
+        text-align: center;
+        line-height: 1.2;
+
+        b {
+            font-family: "Gilroy-Bold";
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__card {
+        padding: 20px 20px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        background: #fff;
+        border: 1px solid #B7CAF0;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px rgb(25, 28, 37, 0.15);
+    }
+
+    &__img {
+        width: 329px;
+        height: 552px;
+        border: 1px solid rgba(183, 202, 240, 0.3);
+        border-radius: 10px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &__description {
+        font-family: "Gilroy-Light";
+        color: #485079;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    &__name {
+        margin-top: 6px;
+        font-family: "Gilroy-Bold";
+        letter-spacing: -0.3px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .check-list-section {
+      &__items {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+}
+
+@media (max-width: 817px) {
+    .check-list-section {
+        background-image: url(../images/check-list/mobile-bg.png);
+        &__title {
+            font-size: 16px;
+            line-height: 1.25;
+            max-width: 345px;
+            margin-bottom: 30px;
+        }
+        &__items {
+            gap: 14px;
+        }
+        &__card {
+            padding: 9px 9px 16px;
+            gap: 16px;
+            &:nth-child(3) {
+                width: 350px;
+                padding: 9px;
+                gap: 24px;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+        }
+        &__img {
+            position: relative;
+            width: 148px;
+            height: 248px;
+
+            &::before {
+                content: url(../images/check-list/icons/search.svg);
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 11px;
+                right: 1px;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: rgb(255, 255, 255, 0.9);
+            }
+        }
+        &__description {
+            font-size: 14px;
+            max-width: 148px;
+        }
+        &__description {
+            line-height: 1.25;
+        }
+    }
+}
+
+@media (max-width: 495px) {
+    .check-list-section {
+        background-image: url(../images/check-list/mobile-bg-2.png);
+        padding-bottom: 100px;
+        padding-top: 130px;
+        margin-top: -100px;
+    }
+}
