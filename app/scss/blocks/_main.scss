@@ -159,19 +159,18 @@
     color: #485079;
     font-size: 20px;
     font-weight: 500;
-    background-image: url(../images/svg/circle.svg);
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 52px;
     gap: 8px;
   }
 }
 .spinner {
   position: absolute;
-  width: 46px;
-  height: 46px;
-  border: 1px solid transparent;
-  border-top: 2px solid #c858bc;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
+  background: conic-gradient(#c858bc 0deg, #c858bc 0deg, transparent 0deg);
+  transition: background 1s linear;
 }
 
 .line {

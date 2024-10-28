@@ -129,7 +129,7 @@
   }
 
   &__gallery--visible {
-    max-height: 800px;
+    max-height: 925px;
     opacity: 1;
     overflow: visible;
   }
@@ -140,8 +140,9 @@
     border: 1px solid #485079;
 
     &:hover {
-      background-color: #eeeff3;
-      box-shadow: 0px 0px 10px 0px rgba(72,80,121,.2);
+      background-color: $secondary-color;
+      border: 1px solid transparent;
+      color: $white-color;
     }
   }
 }
