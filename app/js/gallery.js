@@ -32,20 +32,20 @@ const workGalleryItems = [{
   
 let shownCount = 0;
   
-  const openModal = (content) => {
-    const modalContent = videoModal.querySelector('.video-modal__content');
-    modalContent.innerHTML = `
-      <span class="video-modal__close"></span>
-      ${content}
-    `;
-    videoModal.style.display = 'block';
-    document.body.classList.add('modal-opened');
-  
-    const video = modalContent.querySelector('video');
-    if (video) {
-      video.play();
-    }
+const openModal = (content) => {
+  const modalContent = videoModal.querySelector('.video-modal__content');
+  modalContent.innerHTML = `
+    <span class="video-modal__close">×</span>
+    ${content}
+  `;
+  videoModal.classList.add('open'); 
+  document.body.classList.add('modal-opened');
+
+  const video = modalContent.querySelector('video');
+  if (video) {
+    video.play();
   }
+};
   
   const onGalleryItemClick = (item) => {
     if (item.video) {
@@ -116,12 +116,11 @@ let shownCount = 0;
   };
 
   const closeModal = () => {
-    const videoModal = document.getElementById('videoModal');
-    videoModal.style.display = 'none';
+    videoModal.classList.remove('open');
     document.body.classList.remove('modal-opened');
     const modalContent = videoModal.querySelector('.video-modal__content');
     modalContent.innerHTML = '';
-  }
+  };
 
   const updateShownCount = () => {
     const clientWidth = window.innerWidth;
@@ -176,7 +175,7 @@ let shownCount = 0;
       toggleShowMore();
     });
   
-    videoModal.addEventListener('click', function(e) {
+    videoModal.addEventListener('click', (e) => {
       if (e.target === videoModal || e.target.classList.contains('video-modal__close')) {
         closeModal();
       }
