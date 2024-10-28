@@ -147,12 +147,8 @@ class CountdownTimer {
             });
     
             dots.forEach(dot => {
-                if (value === 0) {
-                    dot.style.display = 'none';
-                } else {
                     dot.style.display = 'block';
                     this.updateDotPosition(dot, offset, totalLength);
-                }
             });
         }
     }
