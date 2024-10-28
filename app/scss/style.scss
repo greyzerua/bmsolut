@@ -13,6 +13,7 @@
 @import './blocks/for-whom.scss';
 @import './blocks/_time.scss';
 @import './blocks/_feedback.scss';
+@import './blocks/_why-canva.scss';
 @import './blocks/skills.scss';
 @import './blocks/design-skills.scss';
 @import './blocks/_footer.scss';
@@ -38,7 +39,7 @@ a{
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1186px;
+    max-width: 1225px;
     padding: 0 20px;
 }
 
