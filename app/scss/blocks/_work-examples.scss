@@ -8,7 +8,7 @@
       content: '';
       position: absolute;
       width: 100%;
-      background-size: contain;
+      background-size: cover;
   }
 
   &::before {
@@ -23,6 +23,7 @@
       left: 0;
       height: calc(100vw / 12.38);
       background-image: url(../images/work-examples/wave-bottom-1.png);
+      z-index: 1;
   }
 
   &__container {

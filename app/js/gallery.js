@@ -1,23 +1,30 @@
 
 const workGalleryItems = [{
-    img: './images/work-examples/image-1.jpg',
+    img: './images/work-examples/1.jpg',
     alt: 'Summer'
   }, {
-    img: './images/work-examples/image-2.jpg',
+    img: './images/work-examples/2.jpg',
     alt: 'Season'
   }, {
-    img: './images/work-examples/image-3.jpg',
+    img: './images/work-examples/3.jpg',
     alt: 'New product'
   }, {
-    img: './images/work-examples/image-4.jpg',
+    img: './images/work-examples/4.jpg',
     alt: 'Healing Cream'
   },{
-    img: './images/work-examples/image-5.jpg',
+    img: './images/work-examples/5.jpg',
     alt: 'Speakers'
   }, {
-    img: './images/work-examples/image-6.jpg',
+    img: './images/work-examples/6.jpg',
     alt: 'Model'
-  }];
+  },{
+    img: './images/work-examples/7.jpg',
+    alt: 'Speakers'
+  },{
+    img: './images/work-examples/8.jpg',
+    alt: 'Speakers'
+  }
+];
 
   const DESKTOP_COUNT = 4;
   const MOBILE_COUNT = 4;
