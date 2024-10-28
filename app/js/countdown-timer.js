@@ -119,7 +119,7 @@ class CountdownTimer {
         const spinners = this.spinnerElements[unit];
         const dots = document.querySelectorAll(`.spinner-${unit} .progress-dot`);
         let maxValue;
-
+    
         switch (unit) {
             case 'days':
                 maxValue = 30;
@@ -136,16 +136,16 @@ class CountdownTimer {
             default:
                 maxValue = 1;
         }
-
+    
         const totalLength = 141;
         const percentage = value / maxValue;
-        const offset = totalLength * (1 - percentage);
-
+        const offset = totalLength * percentage;
+    
         if (spinners.length) {
             spinners.forEach(spinner => {
                 spinner.style.strokeDashoffset = offset.toString();
             });
-
+    
             dots.forEach(dot => {
                 if (value === 0) {
                     dot.style.display = 'none';
