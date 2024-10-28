@@ -28,15 +28,22 @@ const getNextDate = () => {
     }
   }
   
-  setStartDate();  
+  setStartDate();
 
-class CountdownTimer {
+  class CountdownTimer {
     constructor() {
         this.timerElements = {
             days: document.querySelectorAll('.main__timer_wrap .timer__inner:nth-child(1) .timer'),
             hours: document.querySelectorAll('.main__timer_wrap .timer__inner:nth-child(3) .timer'),
             minutes: document.querySelectorAll('.main__timer_wrap .timer__inner:nth-child(5) .timer'),
             seconds: document.querySelectorAll('.main__timer_wrap .timer__inner:nth-child(7) .timer')
+        };
+
+        this.spinnerElements = {
+            days: document.querySelectorAll('.spinner-days .progress-circle'),
+            hours: document.querySelectorAll('.spinner-hours .progress-circle'),
+            minutes: document.querySelectorAll('.spinner-minutes .progress-circle'),
+            seconds: document.querySelectorAll('.spinner-seconds .progress-circle')
         };
         
         this.initialTime = {
@@ -90,21 +97,32 @@ class CountdownTimer {
             if (elements.length) {
                 elements.forEach(el => {
                     el.textContent = this.padZero(Math.max(0, this.timeLeft[unit]));
-                })
-                
-                this.updateSpinner(unit, this.timeLeft[unit]);
+                });
+
+                this.updateProgressCircle(unit, this.timeLeft[unit]);
             }
         }
     }
+
+    updateDotPosition(dot, offset, circumference) {
+        const radius = 22.2;
+        const angle = ((circumference - offset) / circumference) * 2 * Math.PI - Math.PI / 2;
+        
+        const x = 23 + radius * Math.cos(angle);
+        const y = 23 + radius * Math.sin(angle);
     
-    updateSpinner(unit, value) {
-        const spinners = document.querySelectorAll(`.spinner-${unit}`);
+        dot.setAttribute('cx', x);
+        dot.setAttribute('cy', y);
+    }
+
+    updateProgressCircle(unit, value) {
+        const spinners = this.spinnerElements[unit];
+        const dots = document.querySelectorAll(`.spinner-${unit} .progress-dot`);
         let maxValue;
     
-        
         switch (unit) {
             case 'days':
-                maxValue = 30; 
+                maxValue = 30;
                 break;
             case 'hours':
                 maxValue = 24;
@@ -116,17 +134,29 @@ class CountdownTimer {
                 maxValue = 60;
                 break;
             default:
-                maxValue = 1; 
+                maxValue = 1;
         }
+    
+        const totalLength = 141;
+        const percentage = value / maxValue;
+        const offset = totalLength * (1 - percentage);
     
         if (spinners.length) {
-            const percentage = (value / maxValue) * 360;
             spinners.forEach(spinner => {
-                spinner.style.transform = `rotate(${percentage}deg)`;
-            })
+                spinner.style.strokeDashoffset = offset.toString();
+            });
+    
+            dots.forEach(dot => {
+                if (value === 0) {
+                    dot.style.display = 'none';
+                } else {
+                    dot.style.display = 'block';
+                    this.updateDotPosition(dot, offset, totalLength);
+                }
+            });
         }
     }
-    
+
     padZero(number) {
         return number.toString().padStart(2, '0');
     }
