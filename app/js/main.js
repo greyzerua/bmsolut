@@ -22,7 +22,6 @@ const hideDropdown = (dropdown) => {
 }
 
 const els = document.querySelectorAll(".dropdown-header, .dropdown-button");
-console.log('els', els);
 
 els.forEach((header) => {
   header.addEventListener("click", function () {

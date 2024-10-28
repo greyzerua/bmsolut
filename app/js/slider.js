@@ -13,13 +13,23 @@ let swiper = new Swiper(".stories-swiper", {
 });
 
 let feedbackSlider = new Swiper(".feedback-swiper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   loop: true,
-  spaceBetween: 30,
-  centeredSlides: true,
+  spaceBetween: 60,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
- 
+  breakpoints: {
+    827: {
+      slidesPerView: 2,
+    },
+    1320: {
+      slidesPerView: 3,
+    },
+    1350: {
+      slidesPerView: 3,
+      centeredSlides: true,
+    },
+  }
 });

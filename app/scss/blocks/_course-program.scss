@@ -66,13 +66,16 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-bottom: 46px;
     max-width: 845px;
-    &:last-child {
-      margin-bottom: 0px;
-    }
   }
-
+  .dropdown-outer__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 46px;
+    margin-bottom: 66px;
+  }
   .dropdown {
     position: relative;
     border-radius: 10px;
@@ -236,6 +239,9 @@
     font-size: 15px;
     max-width: 350px;
     margin: 0 auto;
+  }
+  .course-program .dropdown-outer__wrap {
+    margin-bottom: 27px;
   }
 }
 
