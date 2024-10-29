@@ -98,6 +98,21 @@
 
 @media (max-width: 900px) {
   .autor {
+    position: relative;
+    padding-bottom: calc(100vw / 7.49);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      height: calc(100vw / 7.49);
+      background-image: url(../images/autor/autor-wave-bottom.png);
+      z-index: 1;
+    }
+
     &__content {
       width: 100%;
       background-image: none;
@@ -128,7 +143,7 @@
       flex-direction: column;
       align-items: center;
       height: unset;
-      padding: 25px 22px 44px 23px;
+      padding: 25px 22px 30px 23px;
       margin-top: -98px;
       &__title {
         font-size: 29px;
