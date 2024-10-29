@@ -46,6 +46,7 @@
         margin-bottom: 39px;
         line-height: 1.1;
         text-align: center;
+        font-family: 'UbuntuSansBold';
     }
     &__items {
         display: flex;
@@ -119,6 +120,9 @@
         color: #485079;
         span {
           color: $secondary-color;
+        }
+        br {
+          display: none;
         }
       }
 }
@@ -221,6 +225,9 @@
         }
         &__desc-subtitle {
             font-size: 14px;
+            br {
+              display: block;
+            }
         }
     }
 }
