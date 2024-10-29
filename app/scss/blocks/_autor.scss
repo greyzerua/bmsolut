@@ -1,0 +1,197 @@
+.autor-photo-mobile {
+  display: none;
+}
+.autor {
+  padding: 70px 0px 30px;
+  &__title {
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    color: $primary-color;
+  }
+  &__content__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 53px;
+    img {
+      width: 606px;
+      height: 654px;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    background-image: url(../images/autor/bg-content.png);
+    width: 880px;
+    height: 532px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -288px;
+
+    padding: 86px 80px 0px;
+    &__title {
+      color: $secondary-color;
+      font-size: 40px;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+    }
+    &__desc {
+      font-family: "Gilroy-Bold";
+      color: #485079;
+      font-size: 22px;
+      margin-top: 24px;
+    }
+    &__list {
+      margin-top: 24px;
+      li {
+        display: flex;
+        font-family: "Gilroy-Regular";
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #485079;
+        &:before {
+          content: "";
+          display: flex;
+          min-width: 11px;
+          min-height: 11px;
+          margin-right: 19px;
+          transition: 0.3s all;
+          background-image: url(../images/list-img.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-top: 2px;
+        }
+      }
+    }
+    &__items {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    &__item {
+      background-image: url(../images/autor/circle.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 203px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: #485079;
+    }
+    &__item-count {
+      font-family: "Gilroy-Black";
+      font-size: 50px;
+      margin-left: 10px;
+    }
+    &__item-text {
+      font-family: "Gilroy-Regular";
+      font-size: 18px;
+      max-width: 274px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .autor {
+    &__content {
+      width: 100%;
+      background-image: none;
+      background-color: $background-color;
+      box-shadow: 0px 0px 20px 0px rgba(25, 28, 37, 0.1);
+      border-top-left-radius: 45px;
+      border-top-right-radius: 45px;
+    }
+    .width-container {
+      padding: 0px;
+    }
+  }
+}
+@media (max-width: 630px) {
+  .autor-photo {
+    display: none;
+  }
+  .autor-photo-mobile {
+    display: inline-block;
+  }
+  .autor {
+    padding: 14px 0px 30px;
+    &__title {
+      font-size: 29px;
+    }
+    &__content {
+      height: unset;
+      padding: 25px 35px 44px 23px;
+      margin-top: -98px;
+      &__title {
+        font-size: 29px;
+      }
+      &__desc {
+        font-size: 17px;
+        max-width: 360px;
+        line-height: 1.4;
+        margin-top: 9px;
+      }
+      &__list {
+        margin-top: 15px;
+        li {
+          font-size: 15px;
+          line-height: 1.4;
+          max-width: 365px;
+          &:before {
+            margin-top: 3px;
+          }
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      &__items {
+        margin-top: 20px;
+      }
+      &__item {
+        justify-content: flex-start;
+        min-height: 152px;
+        padding-top: 16px;
+        background-size: cover;
+      }
+      &__item-count {
+        font-size: 40px;
+      }
+      &__item-text {
+        font-size: 14px;
+        max-width: 168px;
+        line-height: 1.4;
+        margin-top: 14px;
+      }
+    }
+    &__content__wrap {
+      margin-top: 12px;
+      img {
+        width: 76%;
+        height: unset;
+      }
+    }
+  }
+}
+@media (max-width: 470px) {
+  .autor {
+    &__content {
+      margin-top: -57px;
+    }
+    &__list {
+      li {
+        font-size: 14px;
+      }
+    }
+    &__content__wrap {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
