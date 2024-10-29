@@ -1,11 +1,38 @@
 .time-section {
     position: relative;
-    min-height: 622px;
-    background-image: url(../images/time/time-section-bg.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 220px;
+    padding-bottom: 20px;
+    padding: calc(100vw / 12.56) 0 calc(100vw / 15.95);
+    background-image: unset;
+    position: relative;
+    background-color: transparent;
     z-index: 1;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-size: cover;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        height: calc(100vw / 12.56);
+        background-image: url(../images/time/time-wave-top.png);
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+        height: calc(100vw / 15.95);
+        background-image: url(../images/time/time-wave-bottom.png);
+    }
+
+    &__content {
+      background-color: #F6F7F9;
+      padding: 50px 0 90px;
+    }
+        
     &__container {
         display: flex;
         flex-direction: column;
@@ -98,7 +125,6 @@
 
 @media (max-width: 1160px) {
     .time-section {
-        padding-top: 185px;
 
       &__title {
         font-size: 46px;
@@ -169,7 +195,7 @@
         }
 
         &__content {
-            background-color: #F6F7F9;
+            padding: 0;
         }
 
         &__title {
