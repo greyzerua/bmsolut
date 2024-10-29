@@ -180,36 +180,7 @@
 .line-mobile {
   display: none;
 }
-@media (max-height: 850px) and (min-width: 1200px) {
-  .main {
-    &__content {
-      margin-top: 30px;
-    }
-    &__desc {
-      font-size: 26px;
-    }
-    &__title {
-      font-size: 100px;
-    }
-    &__subtitle {
-      font-size: 22px;
-      padding-top: 25px;
-    }
-    &__price {
-      font-size: 45px;
-      margin: 18px 0px 35px;
-      span {
-        font-size: 27px;
-      }
-    }
-    .line {
-      width: calc((100vw - 1180px) / 2 + 326px);
-    }
-    .bg-photo {
-      left: -40px;
-    }
-  }
-}
+
 @media (max-width: 1200px) {
   .main__join {
     align-items: flex-start;
@@ -376,5 +347,21 @@
 @media (max-width: 450px) {
   .main {
     background-position-y: bottom;
+  }
+}
+
+@media (max-height: 810px) and (min-width: 1200px) {
+  .main__title, .main__title span {
+    font-size: 88px;
+  }
+  .main__title {
+    margin-bottom: 25px;
+  }
+  .main__content {
+    margin-top: 25px;
+    padding-bottom: 65px;
+  }
+  .main__subtitle {
+    padding-top: 25px;
   }
 }
