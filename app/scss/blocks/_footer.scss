@@ -1,11 +1,27 @@
 @import "variables";
 
 .footer {
-  background-color: #e07fc1;
-  padding: 70px 0px 31px;
-  color: #fff;
+  padding-top: calc(100vw / 18.77);
   position: relative;
-  font-family: 'Gilroy-Light';
+  background-color: #f6f7f9;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+      top: 0;
+      left: 0;
+      height: calc(100vw / 18.77);
+      background-image: url(../images/footer/footer-wave-top.png);
+  }
+
+  &__container {
+    background-color: #e07fc1;
+    padding-bottom: 31px;
+    font-family: 'Gilroy-Light';
+    color: #fff;
+  }
   .width-container {
     padding: 0 40px;
   }
@@ -15,6 +31,8 @@
   &__content {
     display: flex;
     align-items: center;
+    margin-top: -20px;
+    z-index: 1;
   }
 
   &__logo {
@@ -121,7 +139,9 @@
 
 @media (max-width: 889px) {
   .footer {
-    padding: 29px 0;
+    &__container {
+      padding: 29px 0;
+    }
     &__content {
       flex-direction: column;
     }
@@ -154,6 +174,18 @@
     }
     &__info {
       flex-direction: column;
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
+  .footer {
+    &__container {
+      padding: 35px 0;
+    }
+    &__content {
+      margin-top: unset;
     }
   }
 }
