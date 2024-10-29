@@ -1,0 +1,176 @@
+.why-canva {
+    position: relative;
+    padding-top: calc(100vw / 11.56);
+
+    &__container {
+        background-color: #F6F7F9;
+        padding: 50px 0 100px;
+    }
+  
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        height: calc(100vw / 11.56);
+        background-image: url(../images/why-canva/wave-top-2.png);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 60px;
+        color: #083155;
+        margin-bottom: 50px;
+        font-weight: 700;
+
+        span {
+            color: #C858BC;
+        }
+    }
+
+    &__items {
+        display: grid;
+        justify-items: center;
+        position: relative;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    &__card-count {
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 107px;
+        min-width: 107px;
+        height: 98px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../images/why-canva/icons/vector-1.svg);
+    
+        &-wrap {
+            position: relative;
+            z-index: 1;
+        }
+    
+        &-inner {
+          height: 95px;
+          width: 100px;
+          position: absolute;
+          top: -2px;
+          left: 7px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-size: cover;
+          justify-content: center;
+          background-image: url(../images/why-canva/icons/vector-2.svg);
+        }
+    }
+
+    &__card {
+        width: 100%;
+    }
+
+    &__card-wrapper {
+        display: flex;
+        min-height: 185px;
+        max-width: 375px;
+        position: relative;
+        padding: 70px 13px 13px;
+        margin-top: -45px;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 0px rgba(8, 49, 85, 0.1019607843);
+        color: #485079;
+      }
+
+      &__card-description {
+        font-family: "Gilroy-Regular";
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.38;
+
+        b {
+            font-family: "Gilroy-Bold";
+        }
+      }
+
+}
+
+@media (max-width: 950px) {
+    .why-canva {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .why-canva {
+        &__items {
+            gap: 14px;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .why-canva {
+        padding-top: 0;
+        
+        &::before {
+            content: none;
+        }
+
+        &__container {
+            padding: 30px 0 60px;
+        }
+
+        &__title {
+            font-size: 29px;
+            margin-bottom: 14px;
+        }
+
+        &__card-wrapper {
+            max-width: 168px;
+            min-height: 166px;
+            padding: 60px 7px 13px;
+        }
+
+        &__card-description {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        &__card-count {
+            width: 91px;
+            min-width: 91px;
+            height: 83px;
+
+            &-inner {
+              height: 80px;
+              width: 84px;
+              top: -2px;
+              left: 7px;
+
+              img {
+                height: 26px;
+              }
+            }
+        }
+    }
+}
