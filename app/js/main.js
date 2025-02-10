@@ -1,22 +1,36 @@
 import "./countdown-timer.js";
 import {onLoad as onGalleryLoad} from "./gallery.js";
 
-let loader = document.getElementById("preloader");
-let body = document.querySelector("body");
-document.addEventListener("DOMContentLoaded", function () {
-    let img = document.querySelector(".main__img.desktop-photo");
-    if (img.complete) {
-        hideLoader();
-    } else {
-        img.addEventListener("load", hideLoader);
-        img.addEventListener("error", hideLoader);
-    }
-});
 
-function hideLoader() {
-    loader.style.display = "none";
-    body.style.overflow = "";
-}
+// document.addEventListener("load", function () {
+//     console.log('load')
+//     function checkImage() {
+//         let img;
+//
+//         if (window.innerWidth <= 610) {
+//             img = document.querySelector(".main__img .mobile-photo");
+//
+//         } else {
+//             img = document.querySelector(".main__img .desktop-photo");
+//
+//         }
+//
+//         if (img) {
+//             if (img.complete) {
+//                 hideLoader();
+//                 console.log(img)
+//             } else {
+//                 console.log('event listeet')
+//                 img.addEventListener("load", hideLoader);
+//                 img.addEventListener("error", hideLoader);
+//             }
+//         }
+//     }
+//
+//     checkImage();
+//     // window.addEventListener("resize", checkImage);
+// });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     onGalleryLoad();

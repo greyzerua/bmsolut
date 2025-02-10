@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./images/bm-solution.png" />
   <link rel="stylesheet" href="css/style.min.css" />
-  <script type="module" src="js/main.min.js"></script>
+  <script type="module" src="js/main.min.js" defer></script>
   <title>Canva - це просто</title>
   <script>
     !function(f,b,e,v,n,t,s)
@@ -142,7 +142,7 @@
             <img
                     class="main__img mobile-photo"
                     alt="photo-mobile"
-                    src="./images/owner-mobile.png"
+                    src="./images/owner-mobile.webp"
             />
           </div>
         </div>
@@ -1385,5 +1385,38 @@
     </video>
   </div>
 </div>
+<script>
+
+  function checkImage() {
+    let img;
+
+    let loader = document.getElementById("preloader");
+    let body = document.querySelector("body");
+
+    function hideLoader() {
+      loader.style.display = "none";
+      body.style.overflow = "";
+    }
+
+    if (window.innerWidth <= 610) {
+      img = document.querySelector(".main__img.mobile-photo");
+
+    } else {
+      img = document.querySelector(".main__img.desktop-photo");
+
+    }
+
+    if (img) {
+      if (img.complete) {
+        hideLoader();
+      } else {
+        img.addEventListener("load", hideLoader);
+        img.addEventListener("error", hideLoader);
+      }
+    }
+  }
+
+  checkImage();
+</script>
 </body>
 </html>

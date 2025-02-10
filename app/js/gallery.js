@@ -1,27 +1,27 @@
 
 const workGalleryItems = [{
-    img: './images/work-examples/1.jpg',
+    img: './images/work-examples/1.webp',
     alt: 'Summer'
   }, {
-    img: './images/work-examples/2.jpg',
+    img: './images/work-examples/2.webp',
     alt: 'Season'
   }, {
-    img: './images/work-examples/3.jpg',
+    img: './images/work-examples/3.webp',
     alt: 'New product'
   }, {
     img: './images/work-examples/4.jpg',
     alt: 'Healing Cream'
   },{
-    img: './images/work-examples/5.jpg',
+    img: './images/work-examples/5.webp',
     alt: 'Speakers'
   }, {
-    img: './images/work-examples/6.jpg',
+    img: './images/work-examples/6.webp',
     alt: 'Model'
   },{
     img: './images/work-examples/7.jpg',
     alt: 'Speakers'
   },{
-    img: './images/work-examples/8.jpg',
+    img: './images/work-examples/8.webp',
     alt: 'Speakers'
   }
 ];
@@ -78,6 +78,7 @@ const openModal = (content) => {
         <div class="work-examples__image-wrap"><img src="${img}" alt="${alt}" class="work-examples__image" width="340" height="340"></div>
         ${video ? '<div class="work-examples__play-button"></div>' :''}
       `;
+      console.log(img)
       itemContainer.onclick = () => onGalleryItemClick(item);
       return itemContainer;
     }
