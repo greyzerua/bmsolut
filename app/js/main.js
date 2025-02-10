@@ -57,15 +57,20 @@ els.forEach((header) => {
   });
 });
 
-document.querySelectorAll('.swiper-slide').forEach(slide => {
-  slide.addEventListener('click', function () {
-    let videoUrl = this.getAttribute('data-video') + "?autoplay=1";
-    let iframe = document.createElement('iframe');
-    iframe.setAttribute('src', videoUrl);
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('allow', 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture');
-    iframe.setAttribute('allowfullscreen', '');
-    this.innerHTML = '';
-    this.appendChild(iframe);
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".swiper-slide").forEach((slide) => {
+    slide.addEventListener("click", function () {
+      let videoUrl = this.getAttribute("data-video") + "?autoplay=1";
+      let iframe = document.createElement("iframe");
+      iframe.setAttribute("src", videoUrl);
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allow", "autoplay; encrypted-media");
+      iframe.setAttribute("allowfullscreen", "true");
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+
+      this.innerHTML = "";
+      this.appendChild(iframe);
+    });
   });
 });
