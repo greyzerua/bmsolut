@@ -4,10 +4,10 @@ import { onLoad as onGalleryLoad } from "./gallery.js";
 let loader = document.getElementById("preloader");
 let body = document.querySelector("body");
 
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-  body.style.overflow = "";
-});
+// window.addEventListener("load", function () {
+//   loader.style.display = "none";
+//   body.style.overflow = "";
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   onGalleryLoad();
