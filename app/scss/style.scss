@@ -48,3 +48,32 @@ a{
     font-family: 'Ubuntu';
     font-weight: 700    ;
 }
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url('../images/play-youtube.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+
+
