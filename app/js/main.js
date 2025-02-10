@@ -60,8 +60,9 @@ els.forEach((header) => {
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".swiper-slide").forEach((slide) => {
     slide.addEventListener("click", function () {
-      let videoUrl = this.getAttribute("data-video") + "?autoplay=1";
+      let videoUrl = this.getAttribute("data-video") + "?autoplay=1&mute=1"; // mute=1 для мобильных устройств
       let iframe = document.createElement("iframe");
+
       iframe.setAttribute("src", videoUrl);
       iframe.setAttribute("frameborder", "0");
       iframe.setAttribute("allow", "autoplay; encrypted-media");
@@ -71,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       this.innerHTML = "";
       this.appendChild(iframe);
+
+      setTimeout(() => {
+        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*");
+      }, 500);
     });
   });
 });
