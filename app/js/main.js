@@ -4,10 +4,21 @@ import { onLoad as onGalleryLoad } from "./gallery.js";
 let loader = document.getElementById("preloader");
 let body = document.querySelector("body");
 
-// window.addEventListener("load", function () {
-//   loader.style.display = "none";
-//   body.style.overflow = "";
-// });
+  document.addEventListener("DOMContentLoaded", function () {
+  let img = document.querySelector(".main__img.desktop-photo");
+
+  if (img.complete) {
+    hideLoader();
+  } else {
+    img.addEventListener("load", hideLoader);
+    img.addEventListener("error", hideLoader);
+  }
+});
+
+function hideLoader() {
+  loader.style.display = "none";
+  body.style.overflow = "";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   onGalleryLoad();
