@@ -60,12 +60,12 @@ els.forEach((header) => {
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".swiper-slide").forEach((slide) => {
     slide.addEventListener("click", function () {
-      let videoId = this.getAttribute("data-video").split("/embed/")[1];
+      let videoUrl = this.getAttribute("data-video") + "?autoplay=1&mute=1"; // mute=1 для мобильных устройств
       let iframe = document.createElement("iframe");
 
-      iframe.setAttribute("src", `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1&mute=1`);
+      iframe.setAttribute("src", videoUrl);
       iframe.setAttribute("frameborder", "0");
-      iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+      iframe.setAttribute("allow", "autoplay=1&mute=1; encrypted-media");
       iframe.setAttribute("allowfullscreen", "true");
       iframe.style.width = "100%";
       iframe.style.height = "100%";
@@ -73,16 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
       this.innerHTML = "";
       this.appendChild(iframe);
 
-
-      iframe.onload = function () {
-        let player = new YT.Player(iframe, {
-          events: {
-            "onReady": function (event) {
-              event.target.playVideo();
-            },
-          },
-        });
-      };
+      setTimeout(() => {
+        iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*");
+      }, 500);
     });
   });
 });
